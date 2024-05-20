@@ -1,0 +1,80 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fruits Game</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="ژورک، ژورک رضاپور، علی اکبر رضاپور، رضاپور، توسعه نرم‌افزار، توسعه اپلیکیشن، توسعه دیتابیس، توسعه وبسایت، توسعه وب اپلیکیشن، مدیر پروژه، مدیر فناوری، مدیر ارشد سیستم، مدیر طرح و برنامه، مدیر دیتابیس، معمار نرم‌افزار، معمار سیستم">
+		<meta name="description" content="بازی فروتجور">
+		<meta name="author" content="علی‌اکبر رضاپور">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="jquery-ui.css">
+        <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"> -->
+        <link rel="icon" href="favicon.ico" />
+        <link href="manifest.webmanifest" rel="manifest" />
+        <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+        <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+    </head>
+    
+    <body>
+        <div id="container">
+            <div id="score">
+                Score: <span id="scorevalue">0</span>
+            </div>
+            <div id="trialsLeft">
+                
+            </div>
+            <div id="correct">
+                Correct
+            </div>
+            <div id="wrong">
+                Try again
+            </div>
+            <div id="fruitsContainer">
+                <img id="fruit1" class="fruit">
+                <div id="gameOver">
+                
+                </div>
+            </div>
+            <div id="instruction">
+                Catch Fruits
+            </div>
+            <div id="startreset">
+                Start Game
+            </div>
+            
+            <div id="poweredby">Powered By <a class="text-decoration-none" target="_blank" href="https://joorak.com">Joorak.com</a></div>
+        </div>
+        <audio id="slicesound">
+            <source src="audio/slicefruit.mp3"></source>
+            <source src="audio/slicefruit.ogg"></source>
+        </audio>
+        <script src="jquery.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
+        <script src="app.js"></script>
+        <!-- <script>navigator.serviceWorker.register('service-worker.js');</script> -->
+        <script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function() {
+					navigator.serviceWorker.register('sw.js').then(function(reg) {
+						if(reg.installing) {
+						console.log('Service worker installing');
+						} else if(reg.waiting) {
+						console.log('Service worker installed');
+						} else if(reg.active) {
+						console.log('Service worker active');
+						}
+					
+					
+					}).catch(function(error) {
+					// registration failed
+					console.log('Registration failed with ' + error);
+				});
+				});
+			}
+		</script>
+    </body>
+</html>
