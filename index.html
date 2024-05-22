@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
         <link rel="stylesheet" href="app.css">
         <link rel="stylesheet" href="jquery-ui.css">
-        <!-- <link rel="stylesheet" href="jquery.mobile.min.css"> -->
+        <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"> -->
         <link rel="icon" href="favicon.ico" />
         <link href="manifest.webmanifest" rel="manifest" />
         <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
@@ -19,32 +19,35 @@
     </head>
     
     <body>
-        <div id="container">
-            <div id="score">
-                Score: <span id="scorevalue">0</span>
+        <div id="container" data-role="page">
+            <div data-role="header">
+                <div id="score">
+                    Score: <span id="scorevalue">0</span>
+                </div>
+                <div id="trialsLeft">
+                    
+                </div>
+                <div id="correct">
+                    Correct
+                </div>
+                <div id="wrong">
+                    Try again
+                </div>
             </div>
-            <div id="trialsLeft">
-                
-            </div>
-            <div id="correct">
-                Correct
-            </div>
-            <div id="wrong">
-                Try again
-            </div>
-            <div id="fruitsContainer">
+            <div id="fruitsContainer" role="main" class="ui-content">
                 <img id="fruit1" class="fruit">
                 <div id="gameOver">
                 
                 </div>
             </div>
-            <div id="instruction">
-                Catch Fruits
+            <div data-role="footer">
+                <div id="instruction">
+                    Catch Fruits
+                </div>
+                <div id="startreset">
+                    Start Game
+                </div>
             </div>
-            <div id="startreset">
-                Start Game
-            </div>
-            
             <div id="poweredby">Powered By <a class="text-decoration-none" target="_blank" href="https://joorak.com">Joorak.com</a></div>
         </div>
         <audio id="slicesound">
@@ -53,7 +56,7 @@
         </audio>
         <script src="jquery.min.js"></script>
         <script src="jquery-ui.min.js"></script>
-        <!-- <script src="jquery.mobile.min.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
         <script src="app.js"></script>
         <!-- <script>navigator.serviceWorker.register('service-worker.js');</script> -->
         <script>
