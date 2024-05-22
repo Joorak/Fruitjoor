@@ -1,5 +1,5 @@
 
-var CACHE_NAME = 'offline_fruitjoor_0001';
+var CACHE_NAME = 'offline_fruitjoor_0002';
 var STATIC_FILES = ['app.css','app.css','app.js','icon-192.png','icon-512.png','jquery-ui.css','jquery-ui.min.js','jquery.min.js','manifest.webmanifest','audio/slicefruit.ogg','audio/slicefruit.mp3','images/fruit0.png','images/fruit1.png','images/fruit2.png','images/fruit3.png','images/fruit4.png','images/fruit5.png','images/fruit6.png','images/fruit7.png','images/fruit8.png','images/heart.png','images/heart1.png','images/heart2.png'];
 var STATIC_FILES1 = [
     'vendor/bootstrap/css/bootstrap.min.css',
