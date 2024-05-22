@@ -41,7 +41,7 @@ html{
 
 #correct{
     position: absolute;
-    left: 260px;
+    left: 17.334;
     background-color: #42e252;
     color: white;
     padding: 11px;
@@ -60,7 +60,7 @@ html{
 #fruitsContainer{
     width: 90%;
     height: 400px;
-    margin: 50px auto 10px auto;
+    margin: 3rem auto 10px auto;
     background-color: white;
     box-shadow: 0px 4px #535aa8;
     -moz-box-shadow: 0px 4px #535aa8;
@@ -93,10 +93,10 @@ html{
 
 .box{
     width: 6rem;
-    height: 85px;
+    height: 5.667rem;
     background-color: white;
     float: left;
-    margin-right: 36px;
+    margin-right: 2.5rem;
     border-radius: 3px;
     cursor: pointer;
     box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
