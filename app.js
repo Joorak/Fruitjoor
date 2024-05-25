@@ -7,6 +7,11 @@ var action; //used for setInterval
 var fruits = ['apple', 'banana', 'cherries', 'grapes', 'mango', 'orange', 'peach', 'pear', 'watermelon'];
 $(function(){
     
+
+    // $("#score").click(function(){
+    //     var left = $( document ).width() - Math.round($( document ).width()*0.1);
+    //     alert($( document ).width() + '    ' + Math.round(left*Math.random()));
+    // });
 //click on start reset button
     
 $("#startreset").click(function(){
@@ -47,7 +52,7 @@ $('#fruit1').on('touchstart', function (e) {
     $(this).trigger('mouseover');
 });   
 $("#fruit1").mouseover(function(){
-    alert(score);
+    //alert(score);
     score++;
     $("#scorevalue").html(score); //update score
 //    document.getElementById("slicesound").play();
@@ -81,7 +86,10 @@ function startAction(){
     //generate a fruit
     $("#fruit1").show();
     chooseFruit(); //choose a random fruit
-    $("#fruit1").css({'left' : Math.round(550*Math.random()), 'top' : -50}); //random position
+    //var left = $("#fruitsContainer").width() -100;
+    var gamepadWidth = $( document ).width() - Math.round($( document ).width()*0.1);
+    //alert($( document ).width() + '    ' + left);
+    $("#fruit1").css({'left' : Math.round(gamepadWidth*Math.random()), 'top' : -50}); //random position
     
     //generate a random step
     step = 1+ Math.round(5*Math.random()); // change step
@@ -99,7 +107,7 @@ function startAction(){
                 //generate a fruit
                 $("#fruit1").show();
                 chooseFruit(); //choose a random fruit
-                $("#fruit1").css({'left' : Math.round(550*Math.random()), 'top' : -50}); //random position
+                $("#fruit1").css({'left' : Math.round(gamepadWidth*Math.random()), 'top' : -50}); //random position
 
                 //generate a random step
                 step = 1+ Math.round(5*Math.random()); // change step

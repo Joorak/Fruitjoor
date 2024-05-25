@@ -8,8 +8,7 @@ html{
 }
 #container{
     height: 600px;
-    /* width: 750px; */
-    width: 95%;
+    width: 750px;
     background-color: #9DD2EA;
     margin: 10px auto;
     padding: 20px;
@@ -20,40 +19,31 @@ html{
 /*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
-@media (max-width: 50px) {
+@media (max-width: 576px) {
     #container {
-        /* width: 100% !important; */
-        height: 800px !important;
+        width: 400px;
+        height: 800px;
     }
     #fruitsContainer{
-        /* width: 400px !important; */
-        height: 600px !important;
-        margin: 50px 10px 10px 10px !important;
+        width: 350px;
+        height: 600px;
     }
     #instruction{
-        width: 250px !important;
+        width: 250px;
     }
     #score{
-        left:320px !important;
+        left:350px;
     }
     #gameOver{
-        width: 250 !important;
-        left: 50px !important;
-    }
-    .fruit{
-        width: 75px !important;
-        height: 75px !important;
+        width: 250px;
     }
   }
 #score{
     background-color: #F1FF92;
     color: #888E5F;
     padding: 11px;
-    /* position: absolute; */
-    /* left: 700px; */
-    display: flex;
-    float: right;
-    margin-right: 25px;
+    position: absolute;
+    left: 700px;
     box-shadow: 0px 4px 0px #9da853;
     -moz-box-shadow: 0px 4px 0px #9da853;
     -webkit-box-shadow: 0px 4px 0px #9da853;
@@ -76,9 +66,8 @@ html{
 }
 
 #fruitsContainer{
-    /* width: 650px; */
-    width: 98%;
-    height: 75%;
+    width: 650px;
+    height: 400px;
     margin: 50px auto 10px auto;
     background-color: white;
     box-shadow: 0px 4px #535aa8;
@@ -93,8 +82,8 @@ html{
 }
 
 #instruction{
-    width: 80%;
-    height: 10%;
+    width: 450px;
+    height: 50px;
     background-color: #B481D9;
     margin: 10px auto;
     text-align: center;
@@ -105,8 +94,7 @@ html{
 }
 
 #startreset{
-    width: 100px;
-    height: 5%;
+    width: 78px;
     padding: 10px;
     background-color: rgba(255,255,255,0.5);
     margin: 0 auto;
@@ -127,9 +115,7 @@ html{
 #trialsLeft{
     width: 80px;
     padding: 10px;
-    /* position: absolute; */
-    /* display: flex; */
-    float: left;
+    position: absolute;
     background-color: #F1FF92;
     border-radius: 3px;
     box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
@@ -140,10 +126,8 @@ html{
 }
 
 #gameOver{
-    /* height: 200px;
-    width: 500px; */
-    height: 70%;
-    width: 80%;
+    height: 200px;
+    width: 500px;
     background: linear-gradient(#F3CA6B, #F3706C);
     background: -webkit-linear-gradient(#F3CA6B, #F3706C);
     background: -o-linear-gradient(#F3CA6B, #F3706C);
@@ -153,10 +137,8 @@ html{
     text-align: center;
     text-transform: uppercase;
     position: absolute;
-    margin: auto;
-    padding: 25px 10px;
-    /* top: 170px;
-    left: 145px; */
+    top: 170px;
+    left: 145px;
     z-index: 2;
     display: none;
     
@@ -170,8 +152,6 @@ html{
 
 .fruit{
     display: none;
-    width: 100px;
-    height: 100px;
     position: absolute;
 }
 #poweredby{
