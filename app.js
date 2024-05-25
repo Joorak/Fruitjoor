@@ -96,7 +96,10 @@ function startAction(){
                 //generate a fruit
                 $("#fruit1").show();
                 chooseFruit(); //choose a random fruit
-                $("#fruit1").css({'left' : Math.round($("#fruitsContainer").width()*Math.random()), 'top' : -50}); //random position
+                var left = Math.round($("#fruitsContainer").width()*Math.random());
+                if(left < 50 || left > $("#fruitsContainer").width() - 50)
+                    left = Math.round($("#fruitsContainer").width()/2)
+                $("#fruit1").css({'left' : left, 'top' : -50}); //random position
 
                 //generate a random step
                 step = 1+ Math.round(5*Math.random()); // change step

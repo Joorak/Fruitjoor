@@ -14,11 +14,11 @@ html{
     }
   }
 #container{
-    height: 600px;
-    width: 90%;
+    height: 100%;
+    width: 50%;
     background-color: #9DD2EA;
     margin: 10px auto 0px auto;
-    padding: 20px 20px 0px 20px;
+    /* padding: 20px 20px 0px 20px; */
     border-radius: 10px;
     box-shadow: 0px 4px 0px 0px #009de4;
     -moz-box-shadow: 0px 4px 0px 0px #009de4;
@@ -26,7 +26,11 @@ html{
 /*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
-
+@media (max-width: 575px) {
+    #container {
+        width: 100%;
+    }
+  }
 #score{
     background-color: #F1FF92;
     color: #888E5F;
@@ -58,9 +62,9 @@ html{
 }
 
 #fruitsContainer{
-    width: 90%;
-    height: 400px;
-    margin: 3rem auto 10px auto;
+    /* width: 100%; */
+    height: 65%;
+    margin: 3rem 10px 10px 10px;
     background-color: white;
     box-shadow: 0px 4px #535aa8;
     -moz-box-shadow: 0px 4px #535aa8;
@@ -71,6 +75,7 @@ html{
     color: black;
     position: relative;
     overflow: hidden;
+    padding: 0 !important;
 }
 
 #instruction{
@@ -92,8 +97,8 @@ html{
 }
 
 .box{
-    width: 6rem;
-    height: 5.667rem;
+    /* width: 6rem; */
+    /* height: 5.667rem; */
     background-color: white;
     float: left;
     margin-right: 2.5rem;
@@ -133,7 +138,7 @@ html{
 }
 
 #startreset{
-    width: 5rem;
+    width: 7rem;
     padding: 0.667rem;
     background-color: rgba(255,255,255,0.5);
     margin: 0 auto;
@@ -173,8 +178,8 @@ html{
 }
 
 #gameOver{
-    height: 70%;
-    width: 90%;
+    /* height: 70%; */
+    width: 80%;
     background: linear-gradient(#F3CA6B, #F3706C);
     background: -webkit-linear-gradient(#F3CA6B, #F3706C);
     background: -o-linear-gradient(#F3CA6B, #F3706C);
@@ -183,7 +188,8 @@ html{
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-    margin: 3rem auto;
+    margin: 2rem auto;
+    padding: 1rem;
     /* top: 11.334rem;
     left: 10rem; */
     z-index: 2;
