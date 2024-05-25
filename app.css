@@ -1,24 +1,17 @@
 /*styling.css*/
 html{
     height: 100%;
-    font-size: 15px;
     background: radial-gradient(circle, #fff, #ccc);
     background: -webkit-radial-gradient(circle, #fff, #ccc);   
     background: -o-radial-gradient(circle, #fff, #ccc);   
     background: -moz-radial-gradient(circle, #fff, #ccc);
 }
-
-@media (max-width: 575px) {
-    html {
-      font-size: 11px;
-    }
-  }
 #container{
-    height: 100%;
-    width: 50%;
+    height: 600px;
+    width: 750px;
     background-color: #9DD2EA;
-    margin: 10px auto 0px auto;
-    /* padding: 20px 20px 0px 20px; */
+    margin: 10px auto;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 0px 0px #009de4;
     -moz-box-shadow: 0px 4px 0px 0px #009de4;
@@ -26,35 +19,27 @@ html{
 /*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
-@media (max-width: 575px) {
-    #container {
-        width: 100%;
-    }
-  }
 #score{
     background-color: #F1FF92;
     color: #888E5F;
     padding: 11px;
-    
-    /* left: 700px; */
-    float:right;
+    position: absolute;
+    left: 700px;
     box-shadow: 0px 4px 0px #9da853;
     -moz-box-shadow: 0px 4px 0px #9da853;
     -webkit-box-shadow: 0px 4px 0px #9da853;
 }
 
 #correct{
-    position: absolute;
-    left: 17.334;
+    float:right;
     background-color: #42e252;
     color: white;
-    padding: 11px;
+    padding: 1rem;
     display: none;
 }
 
 #wrong{
-    position: absolute;
-    left: 16.667rem;
+    float:right;
     background-color: #de401a;
     color: white;
     padding: 11px;
@@ -62,24 +47,23 @@ html{
 }
 
 #fruitsContainer{
-    /* width: 100%; */
-    height: 65%;
-    margin: 3rem 10px 10px 10px;
+    width: 650px;
+    height: 400px;
+    margin: 50px auto 10px auto;
     background-color: white;
     box-shadow: 0px 4px #535aa8;
     -moz-box-shadow: 0px 4px #535aa8;
     -webkit-box-shadow: 0px 4px #535aa8;
-    font-size: 7rem;
+    font-size: 100px;
     text-align: center;
     font-family: cursive, sans-serif;
     color: black;
     position: relative;
     overflow: hidden;
-    padding: 0 !important;
 }
 
 #instruction{
-    width: 30rem;
+    width: 450px;
     height: 50px;
     background-color: #B481D9;
     margin: 10px auto;
@@ -90,56 +74,9 @@ html{
     -webkit-box-shadow: 0px 4px #8153a8;
 }
 
-#choices{
-    width: 30rem;
-    height: 100px;
-    margin: 5px auto;
-}
-
-.box{
-    /* width: 6rem; */
-    /* height: 5.667rem; */
-    background-color: white;
-    float: left;
-    margin-right: 2.5rem;
-    border-radius: 3px;
-    cursor: pointer;
-    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    line-height: 80px;
-    position: relative;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-}
-
-.box:hover, #startreset:hover{
-/*    background-color: #9C89F6;*/
-/*    color: white;*/
-/*    box-shadow: 0px 4px #6b54d3;*/
-/*    -moz-box-shadow: 0px 4px #6b54d3;*/
-/*    -webkit-box-shadow: 0px 4px #6b54d3;*/
-}
-
-.box:active, #startreset:active{
-    background-color: #9C89F6;
-    color: white;
-    box-shadow: 0px 0px #6b54d3; 
-    -moz-box-shadow: 0px 0px #6b54d3; 
-    -webkit-box-shadow: 0px 0px #6b54d3; 
-    top: 0.25rem;
-}
-#box4{
-    margin-right: 0;   
-}
-
 #startreset{
-    width: 7rem;
-    padding: 0.667rem;
+    width: 78px;
+    padding: 10px;
     background-color: rgba(255,255,255,0.5);
     margin: 0 auto;
     border-radius: 3px;
@@ -156,17 +93,9 @@ html{
     -ms-transition: all 0.2s;   
 }
 
-#poweredby{
-    background-color: transparent;
-    margin: 1.5rem auto 0px auto ;
-    font-size: 0.875rem;
-    text-align: center;
-    position: relative;
-}
-
 #trialsLeft{
-    width: 5.334rem;
-    padding: 0.667rem;
+    width: 80px;
+    padding: 10px;
     position: absolute;
     background-color: #F1FF92;
     border-radius: 3px;
@@ -178,32 +107,38 @@ html{
 }
 
 #gameOver{
-    /* height: 70%; */
-    width: 80%;
+    height: 200px;
+    width: 500px;
     background: linear-gradient(#F3CA6B, #F3706C);
     background: -webkit-linear-gradient(#F3CA6B, #F3706C);
     background: -o-linear-gradient(#F3CA6B, #F3706C);
     background: -moz-linear-gradient(#F3CA6B, #F3706C);
     color: white;
-    font-size: 2rem;
+    font-size: 2.5em;
     text-align: center;
     text-transform: uppercase;
-    margin: 2rem auto;
-    padding: 1rem;
-    /* top: 11.334rem;
-    left: 10rem; */
+    position: absolute;
+    top: 170px;
+    left: 145px;
     z-index: 2;
     display: none;
     
 }
 
 .life{
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     margin: 0 5px;
 }
 
 .fruit{
     display: none;
     position: absolute;
+}
+#poweredby{
+    background-color: transparent;
+    margin: 1.5rem auto 0px auto ;
+    font-size: 0.875rem;
+    text-align: center;
+    position: relative;
 }

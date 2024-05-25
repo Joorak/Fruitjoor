@@ -43,8 +43,11 @@ $("#startreset").click(function(){
 
     
 //slice a fruit
-    
+$('#fruit1').on('touchstart', function (e) {
+    $(this).trigger('mouseover');
+});   
 $("#fruit1").mouseover(function(){
+    alert(score);
     score++;
     $("#scorevalue").html(score); //update score
 //    document.getElementById("slicesound").play();
@@ -78,7 +81,7 @@ function startAction(){
     //generate a fruit
     $("#fruit1").show();
     chooseFruit(); //choose a random fruit
-    $("#fruit1").css({'left' : Math.round($("#fruitsContainer").width()*Math.random()), 'top' : -50}); //random position
+    $("#fruit1").css({'left' : Math.round(550*Math.random()), 'top' : -50}); //random position
     
     //generate a random step
     step = 1+ Math.round(5*Math.random()); // change step
@@ -96,10 +99,7 @@ function startAction(){
                 //generate a fruit
                 $("#fruit1").show();
                 chooseFruit(); //choose a random fruit
-                var left = Math.round($("#fruitsContainer").width()*Math.random());
-                if(left < 50 || left > $("#fruitsContainer").width() - 50)
-                    left = Math.round($("#fruitsContainer").width()/2)
-                $("#fruit1").css({'left' : left, 'top' : -50}); //random position
+                $("#fruit1").css({'left' : Math.round(550*Math.random()), 'top' : -50}); //random position
 
                 //generate a random step
                 step = 1+ Math.round(5*Math.random()); // change step
@@ -114,7 +114,7 @@ function startAction(){
                 playing = false; //we are not playing anymore
                 $("#startreset").html("Start Game"); // change button to Start Game
                 $("#gameOver").show();
-                $("#gameOver").html('<br /><p>Game Over!</p><p>Your score is '+ score +'</p>');
+                $("#gameOver").html('<p>Game Over!</p><p>Your score is '+ score +'</p>');
                 $("#trialsLeft").hide();
                 stopAction();
             }

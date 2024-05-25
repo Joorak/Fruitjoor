@@ -1,12 +1,12 @@
 
-var CACHE_NAME = 'offline_fruitjoor_0004';
+var CACHE_NAME = 'offline_fruitjoor_0007';
 var STATIC_FILES = [
     'app.css',
     'app.css',
     'app.js',
     'icon-192.png',
     'icon-512.png',
-    'jquery-ui.css',
+    'jquery-ui.min.css',
     'jquery-ui.min.js',
     'jquery.min.js',
     // 'jquery.mobile.min.css',
