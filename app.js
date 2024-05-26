@@ -10,7 +10,7 @@ $(function(){
 
     // $("#score").click(function(){
     //     var left = $( document ).width() - Math.round($( document ).width()*0.1);
-    //     alert($( document ).width() + '    ' + Math.round(left*Math.random()));
+    //     alert($( document ).width() + '    ' + Math.round(left*Math.random()) + '      ' + $("#fruitsContainer").outerHeight());
     // });
 //click on start reset button
     
@@ -101,7 +101,7 @@ function startAction(){
         $("#fruit1").css('top', $("#fruit1").position().top + step);                              
     
         //check if the fruit is too low
-        if($("#fruit1").position().top > $("#fruitsContainer").height()){
+        if($("#fruit1").position().top > $("#fruitsContainer").outerHeight()){
             //check if we have trials left
             if(trialsLeft > 1 ){
                 //generate a fruit
