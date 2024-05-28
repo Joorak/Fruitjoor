@@ -1,5 +1,5 @@
 
-var CACHE_NAME = 'offline_fruitjoor_0031';
+var CACHE_NAME = 'offline_fruitjoor_0032';
 var STATIC_FILES = [
     'app.css',
     'app.css',
