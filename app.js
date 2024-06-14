@@ -4,6 +4,7 @@ var score;
 var trialsLeft;
 // var step;
 var action; //used for setInterval
+var timeout;
 var isMobile = false;
 var fruits = ['apple', 'banana', 'cherries', 'grapes', 'mango', 'orange', 'peach', 'pear', 'watermelon'];
 $(function(){
@@ -50,12 +51,16 @@ $('#fruit1').on('touchstart', function (e) {
     $("#slicesound")[0].play();//play sound
     
     //stop fruit
-    clearInterval(action);
+    if(action)
+        clearInterval(action);
+    if(timeout)
+        clearTimeout(timeout);
     //hide fruit
     $("#fruit1").hide("explode", 500); //slice fruit
     
     //send new fruit
-    setTimeout(startAction, 500);
+    timeout = setTimeout(startAction, 500);
+    //startAction();
 });
 $("#fruit1").on('mouseover', function(){
     if(!action) return;
@@ -66,12 +71,16 @@ $("#fruit1").on('mouseover', function(){
     $("#slicesound")[0].play();//play sound
     
     //stop fruit
-    clearInterval(action);
+    if(action)
+        clearInterval(action);
+    if(timeout)
+        clearTimeout(timeout);
     //hide fruit
     $("#fruit1").hide("explode", 500); //slice fruit
     
     //send new fruit
-    setTimeout(startAction, 500);
+    timeout = setTimeout(startAction, 500);
+    //startAction();
 });
 
     
@@ -148,7 +157,8 @@ function chooseFruit(){
 //Stop dropping fruits
 
 function stopAction(action){
-    clearInterval(action);
+    if(action)
+        clearInterval(action);
     $("#fruit1").hide();
 }
 function Mobile(){
