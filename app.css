@@ -9,7 +9,7 @@ html{
 #container{
     height: 600px;
     /* width: 750px; */
-    width: 95%;
+    width: 600px;
     background-color: #9DD2EA;
     margin: 10px auto;
     padding: 20px;
@@ -20,26 +20,29 @@ html{
 /*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
-@media (max-width: 50px) {
+@media (max-width: 576px) {
     #container {
-        /* width: 100% !important; */
+        width: 100% !important;
+        
         height: 800px !important;
+        margin: 10px 0px !important;
+        padding: 10px !important;
     }
     #fruitsContainer{
-        /* width: 400px !important; */
+        width: 380px !important;
         height: 600px !important;
-        margin: 50px 10px 10px 10px !important;
+        margin: 50px 5px 10px 5px !important;
     }
     #instruction{
-        width: 250px !important;
+        width: 300px !important;
     }
-    #score{
+    /* #score{
         left:320px !important;
-    }
-    #gameOver{
-        width: 250 !important;
-        left: 50px !important;
-    }
+    } */
+    /* #gameOver{
+        width: 300px !important;
+        left: 15px !important;
+    } */
     .fruit{
         width: 75px !important;
         height: 75px !important;
@@ -143,8 +146,8 @@ html{
     /* height: 200px;
     width: 500px; */
     /* height: 70%; */
-    width: calc(100% - 50px);
-    height: calc(100% - 100px);
+    width: 90%;
+    height: 90%;
     background: linear-gradient(#F3CA6B, #F3706C);
     background: -webkit-linear-gradient(#F3CA6B, #F3706C);
     background: -o-linear-gradient(#F3CA6B, #F3706C);
@@ -154,8 +157,7 @@ html{
     text-align: center;
     text-transform: uppercase;
     position: absolute;
-    margin: 20px;
-    padding: 25px 10px;
+    margin: 5%;
     /* top: 10%;
     left: 5%; */
     z-index: 2;
