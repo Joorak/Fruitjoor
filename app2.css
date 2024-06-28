@@ -6,6 +6,7 @@ html{
     background: -o-radial-gradient(circle, #fff, #ccc);   
     background: -moz-radial-gradient(circle, #fff, #ccc);
 }
+
 #container{
     height: 600px;
     width: 750px;
@@ -19,25 +20,7 @@ html{
 /*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
     position: relative;
 }
-@media (max-width: 576px) {
-    #container {
-        width: 400px;
-        height: 800px;
-    }
-    #fruitsContainer{
-        width: 350px;
-        height: 600px;
-    }
-    #instruction{
-        width: 250px;
-    }
-    #score{
-        left:350px;
-    }
-    #gameOver{
-        width: 250px;
-    }
-  }
+
 #score{
     background-color: #F1FF92;
     color: #888E5F;
@@ -50,15 +33,17 @@ html{
 }
 
 #correct{
-    float:right;
+    position: absolute;
+    left: 260px;
     background-color: #42e252;
     color: white;
-    padding: 1rem;
+    padding: 11px;
     display: none;
 }
 
 #wrong{
-    float:right;
+    position: absolute;
+    left: 250px;
     background-color: #de401a;
     color: white;
     padding: 11px;
@@ -155,9 +140,12 @@ html{
     position: absolute;
 }
 #poweredby{
+    width: 450px;
+    height: 30px;
     background-color: transparent;
-    margin: 1.5rem auto 0px auto ;
-    font-size: 0.875rem;
+    margin: 10px auto;
+    /* bottom: 0 !important; */
+    /* font-size: 0.875em; */
     text-align: center;
-    position: relative;
+    position: absolute;
 }
