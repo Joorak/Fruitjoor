@@ -61,7 +61,7 @@ $("#startreset").click(function(){
 //     threshold:0
     
 //  });
-$('#fruit').on('touchstart', function (e) {
+$('#fruit1').on('touchstart', function (e) {
     //if(!action) return;
     //alert('touchstart   '+ isMobile);
     score++;
