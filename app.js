@@ -68,11 +68,11 @@ $('#fruit1').on('touchstart', function (e) {
     $("#scorevalue").html(score); //update score
 //    document.getElementById("slicesound").play();
     // $("#slicesound")[Math.round(2*Math.random())].play();//play sound
-    alert($("#fruit1").position().left + ' ' + $("#fruit1").position().top);
-    $("#flash").addClass('rotated').addClass('scaled').css({
-        'left' : $("#fruit1").position().left,
-        'top' : $("#fruit1").position().top
-    }).show();
+    $('#flash').show().css({
+        'src' : 'images/flash' + Math.round(2*Math.random()) +'.gif',
+        'left' : Math.round($("#fruit1").position().left)-25,
+        'top' : Math.round($("#fruit1").position().top)-25
+    });
     $('#slicesound' + Math.round(2*Math.random()).toString())[0].play();
 
     //stop fruit
