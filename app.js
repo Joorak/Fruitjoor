@@ -68,6 +68,11 @@ $('#fruit1').on('touchstart', function (e) {
     $("#scorevalue").html(score); //update score
 //    document.getElementById("slicesound").play();
     // $("#slicesound")[Math.round(2*Math.random())].play();//play sound
+    alert($("#fruit1").position().left + ' ' + $("#fruit1").position().top);
+    $("#flash").addClass('rotated').addClass('scaled').css({
+        'left' : $("#fruit1").position().left,
+        'top' : $("#fruit1").position().top
+    }).show();
     $('#slicesound' + Math.round(2*Math.random()).toString())[0].play();
 
     //stop fruit
@@ -77,7 +82,9 @@ $('#fruit1').on('touchstart', function (e) {
     //     clearTimeout(timeout);
     //hide fruit
     $("#fruit1").hide("explode", 500); //slice fruit
-    
+    $("#flash").hide("fade",250);
+    $("#flash").removeClass('rotated')
+    $("#flash").removeClass('scaled')
     //send new fruit
     setTimeout(startAction, 500);
     //startAction();
@@ -127,10 +134,18 @@ $("#fruit").on('mousemove', function(){
 //slice a fruit
 
 //functions
-$("#fruit1").mouseover(function(){
+$("#fruit1").mouseover(function(e){
     score++;
     $("#scorevalue").html(score); //update score
-//    document.getElementById("slicesound").play();
+    // alert(e.pageX + ' ' + e.pageY);
+    // var flashImage = $('#flash').attr('src');
+    // flashImage.addClass('rotated').addClass('scaled');
+    // document.createElement('img').css('id','flash').src=flashImage
+    $('#flash').show().css({
+        'src' : 'images/flash' + Math.round(2*Math.random()) +'.gif',
+        'left' : Math.round($("#fruit1").position().left)-25,
+        'top' : Math.round($("#fruit1").position().top)-25
+    });
     $('#slicesound' + Math.round(2*Math.random()).toString())[0].play();
     
     //stop fruit
@@ -138,7 +153,9 @@ $("#fruit1").mouseover(function(){
     
     //hide fruit
     $("#fruit1").hide("explode", 500); //slice fruit
-    
+    $("#flash").hide("fade",250);
+    $("#flash").removeClass('rotated')
+    $("#flash").removeClass('scaled')
     //send new fruit
     setTimeout(startAction, 500);
 });

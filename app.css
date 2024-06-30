@@ -141,7 +141,11 @@ html{
 /*    visibility: hidden;*/
     display: none;
 }
-
+#flash{
+    z-index: 20;
+    display: none;
+    position: absolute;
+}
 #gameOver{
     /* height: 200px;
     width: 500px; */
@@ -183,4 +187,18 @@ html{
     font-size: 0.875rem;
     text-align: center;
     position: relative;
+}
+.rotated {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari and Chrome */
+    -o-transform: rotate(45deg); /* Opera */
+  }
+  .scaled{
+    -webkit-transform: scale(1e-5);  /* Saf3.1+, Chrome */
+    -moz-transform: scale(1e-5);  /* FF3.5+ */
+    -ms-transform: scale(1e-5);  /* IE9 */
+    -o-transform: scale(1e-5);  /* Opera 10.5+ */
+     transform: scale(1e-5);
 }
