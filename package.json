@@ -2,11 +2,8 @@
   "name": "fruitjoor",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {
-    "lite-server": "^2.6.1"
-  },
   "scripts": {
-    "start": "lite-server",
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -70,6 +67,7 @@
     "has-flag": "^4.0.0",
     "http-errors": "^2.0.0",
     "http-proxy": "^1.18.1",
+    "http-server": "^14.1.1",
     "iconv-lite": "^0.4.24",
     "immutable": "^3.8.2",
     "inherits": "^2.0.4",
